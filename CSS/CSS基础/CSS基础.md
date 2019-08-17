@@ -174,6 +174,8 @@ background-position
  	- 一般作为其他元素的⽗父容器器，把其他元素包住，代表⼀一个整体
 	- ⽤用于把⽹网⻚页分割为多个独⽴立的部分
 
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS基础/练习.png)
+
 
 ```
 <!DOCTYPE html>
