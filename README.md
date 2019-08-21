@@ -1,7 +1,7 @@
 # HTML-CSS-JS
 前端学习历程
 
- - [快捷键](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/HTML/快捷键/快捷键.md)
+ - [快捷键](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/快捷键/快捷键.md)
  
 ## HTML 
 
