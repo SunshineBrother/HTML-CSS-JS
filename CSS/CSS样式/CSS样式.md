@@ -1,4 +1,4 @@
-# Font
+# CSS样式
 
 
 ### font-size
@@ -92,12 +92,12 @@ line-height用于设置文本的最小行高
 让line-height等同于height
 
 
-![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/font-size/lineheight.png)
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS样式/lineheight.png)
 
 line-height设置的仅仅是最小行高，不能决定最终的行高
 
 
-![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/font-size/lineheight1.png)
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS样式/lineheight1.png)
 
 
 
