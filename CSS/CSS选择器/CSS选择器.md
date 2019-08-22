@@ -424,69 +424,280 @@ div:lang(en){
 
 
 
+#### 元素状态伪类
+
+- `:enabled` 启用状态
+- `:disabled` 禁用状态
+- `:checked` 被选中状态
+
+
+```
+<style>
+        input:enabled{
+            border: 2px solid red;
+        }
+        input:disabled{
+            border: 2px solid black;
+        }
+        input:checked{
+            border: 2px solid blue;
+        }
+</style>
+
+
+<body>
+    <input type="text">
+    <input type="button" value="按钮1">
+    <bar></bar>
+
+    <input type="text" disabled>
+    <input type="button" value="按钮2" disabled>
+    <bar></bar>
+
+    <input type="checkbox" checked>
+    <input type="checkbox" value="按钮2" checked>
+    <bar></bar>
+    
+</body>
+
+```
+
+#### 结构伪类
+
+**nth-child()**
+
+`:nth-child(1)`  是父元素中的第1个子元素
+
+```
+p:nth-child(1){
+         color: red;
+}
+```
+
+:nth-child(2n)
+
+- n代表任意正整数和0
+- 是父元素中的第偶数个子元素（第2、4、6、8......个）
+- 跟:nth-child(even)同义
+
+【重点】是父元素的第几个元素
+
+```
+<style>
+    p:nth-child(2n){
+        color: red;
+    }
+</style>
+
+
+<body>
+     <p>我是文本1</p>
+     <p>
+         <P>我是文本2</P>
+         <P>我是文本3</P>
+     </p>
+     <p>我是文本4</p>
+     <p>我是文本5</p>
+     <p>我是文本6</p>
+</body>
+```
 
 
 
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/nthchild.png)
+
+
+:nth-child()的完整使用格式是:nth-child(an + b)
+- 是父元素中的第an+b个子元素
+- n代表任意正整数和0
+- a、b需要给出具体值，可以是正整数、负整数、0
 
 
 
+**nth-last-child**
+
+
+:nth-last-child()的语法跟:nth-child()类似，不同点是:nth-last-child()从最后一个子元素开始往前计数
+
+:nth-last-child(1)，代表倒数第一个子元素
+:nth-last-child(-n + 2)，代表最后2个子元素
 
 
 
+**nth-of-type&nth-last-of-type**
+
+
+:nth-of-type()用法跟:nth-child()类似，不同点是:nth-of-type()计数时只计算同种类型的元素
 
 
 
+- :last-child，等同于:nth-last-child(1)
+- :first-of-type，等同于:nth-of-type(1)
+- :last-of-type，等同于:nth-last-of-type(1)
+- :only-child，是父元素中唯一的子元素。等同于:first-child:last-child或者:nth-child(1):nth-last-child(1)
+- :only-of-type，是父元素中唯一的这种类型的子元素。等同于:first-of-type:last-of-type或者:nth-of-type(1):nth-last-of-type(1)
+- :root，根元素，就是HTML元素
 
 
 
+**empty**
+
+
+:empty代表里面完全空白的元素
+
+```
+<style>
+        p:empty{
+            width: 100px;
+            height: 20px;
+            background-color: red;
+        }
+</style>
+
+<body>
+    <p></p>
+    <p>文本1</p>
+    <p>文本2</p>
+</body>
+
+```
+
+
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/empty.png)
 
 
 
+#### 否定伪类（negation pseudo-class）
+
+
+:not()的格式是:not(x)
+
+x是一个简单选择器
+
+元素选择器、通用选择器、属性选择器、类选择器、id选择器、伪类（除否定伪类）
+
+:not(x)表示除x以外的元素
+
+
+```
+:not(p) :not(span){
+        background-color: red;
+}
+```
 
 
 
+### 伪元素（pseudo-elements）
+
+
+常用的伪元素有
+- :first-line、::first-line
+- :first-letter、::first-letter 
+- :before、::before
+- :after、::after
+
+
+为了区分伪元素和伪类，建议伪元素使用2个冒号，比如`::first-line`
 
 
 
+#### ::first-line
+
+::first-line可以针对首行文本设置属性
+
+只有下列属性可以应用在::first-line伪元素
+- 字体属性、
+- 颜色属性、
+- 背景属性
+
+```
+div::first-line{
+     color: blue;
+     text-decoration: underline;
+}
+```
+
+
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/first-line.png)
 
 
 
+#### ::first-letter
+
+
+::first-letter可以针对首字母设置属性
+
+ 
+只有下列属性可以应用在::first-letter伪元素
+
+字体属性、margin属性、padding属性、border属性、颜色属性、背景属性
+text-decoration、text-transform、letter-spacing、word-spacing（适当的时候）、line-height、float、vertical-align（只有当float是none时）
+
+
+#### ::before和::after
+
+::before和::after用来在一个元素的内容之前或之后插入其他内容（可以是文字、图片）
+
+```
+<style>
+    div::before {
+        content: "666";
+        color: blue;
+    }
+    div::after {
+       content: url("images/5.gif");
+        width: 20px;
+        height: 20px;
+    }
+    div {
+         color: red;
+    }
+</style>
+
+
+<body>
+    <div>我是div</div>
+</body>
+
+```
+
+
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/before.png)
+
+
+在CSS属性值中，使用url(图片的URL)来引用图片
+- url(dot.png);
+- url('dot.png');
+- url("dot.png");
 
 
 
+#### attr()
+
+
+在content中，还可以使用attr(属性名)来获得元素的属性值
+
+
+```
+<style>
+        a[href^="http"]::after {
+            content: "[ "attr(href) " ]";
+        }
+</style>
+
+
+<body>
+    <a href="http://www.baidu.com">百度</a><br>
+    <a href="http://www.jd.com">京东</a><br>
+    <a href="http://www.taobao.com">淘宝</a>
+    <a href="#">呵呵</a>
+    <a>哈哈</a>
+</body>
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/attr.png)
 
 
 
