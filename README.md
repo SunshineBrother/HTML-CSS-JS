@@ -14,13 +14,13 @@
  
 - [2、CSS 样式](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS样式/CSS样式.md)
  
-- [3、元素类型](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/元素类型/元素类型.md)
+- [3、CSS 元素类型](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/元素类型/元素类型.md)
 
 - [4、CSS 选择器](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS选择器/CSS选择器.md)
 
-- [5、CSS定位](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS定位/CSS定位.md)
+- [5、CSS 定位](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS定位/CSS定位.md)
  
-- [6、CSS框模型](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS框模型/CSS框模型.md)
+- [6、CSS盒子模型](https://github.com/SunshineBrother/HTML-CSS-JS/blob/master/CSS/CSS盒子模型/CSS盒子模型.md)
  
  
 
